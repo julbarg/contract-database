@@ -1,4 +1,4 @@
-package com.contract.database;
+package com.contract.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

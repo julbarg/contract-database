@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 
@@ -14,7 +15,6 @@ import java.util.List;
 @Document(collection = "categories")
 public class Category {
 
-    public static final String STATUS = "status";
 
     @Id
     private String id;
@@ -23,6 +23,7 @@ public class Category {
 
     private String status;
 
+    @NotNull(message = "Default Value cannot be null")
     private String defaultValue;
 
     public String getDefaultValue() {
