@@ -23,7 +23,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static com.contract.constant.CategoryConstant.*;
-import static com.contract.constant.ExceptionsConstant.DATABASE_NO_RECORDS_UPDATE_EXCEPTION;
+import static com.contract.constant.ExceptionsConstant.DATABASE_NO_RECORDS_UPDATE_EXCEPTION_MESSAGE;
 
 /**
  * Created by anggomez1 on 5/11/17.
@@ -36,7 +36,7 @@ public class CategoryController {
 
     @RequestMapping(value = FIND_ACTIVE, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Category> findActive() throws DataBaseResultNotFoundException {
-        Query query = new Query(Criteria.where(STATUS).is(CategoryStatus.INACTIVE.getStatus()));
+        Query query = new Query(Criteria.where(STATUS).is(CategoryStatus.ACTIVE.getStatus()));
         List<Category> categoryList = mongoTemplate.find(query, Category.class);
         if(categoryList.isEmpty())
             throw new DataBaseResultNotFoundException();
@@ -69,7 +69,7 @@ public class CategoryController {
     }
 
     @RequestMapping(value = UPDATE_BY_LANGUAGES_NAME, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public WriteResult updateByLanguageAndValue(String value, @RequestBody Name name) throws DataBaseResultNotFoundException {
+    public WriteResult updateByLanguageAndName(String value, @RequestBody Name name) throws DataBaseResultNotFoundException {
         Query query = new Query();
         query.addCriteria(Criteria.where(DEFAULT_VALUE).is(value)
                 .andOperator(Criteria.where("names.language").is(name.getLanguage())));
