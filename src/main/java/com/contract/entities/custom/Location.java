@@ -1,4 +1,4 @@
-package com.contract.entities;
+package com.contract.entities.custom;
 
 /**
  * Created by anggomez1 on 5/9/17.

@@ -62,7 +62,7 @@ public class CategoryController {
     }
 
     @RequestMapping(value = INSERT, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Category insertCategory(@RequestBody Category category) {
+    public Category insert(@RequestBody Category category) {
         category.setStatus(CategoryStatus.ACTIVE.getStatus());
         mongoTemplate.insert(category, CATEGORIES);
         return category;

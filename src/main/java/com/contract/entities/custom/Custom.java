@@ -1,8 +1,10 @@
-package com.contract.entities;
+package com.contract.entities.custom;
 
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 
 /**
@@ -14,10 +16,9 @@ public class Custom {
     @Id
     private String id;
     private String name;
-    private String password;
     private Contact contact;
     private Location location;
-
+    private List<Service> services;
 
 
     public String getId() {
@@ -34,14 +35,6 @@ public class Custom {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Contact getContact() {
@@ -61,5 +54,11 @@ public class Custom {
         this.location = location;
     }
 
+    public List<Service> getServices() {
+        return services;
+    }
 
+    public void setServices(List<Service> services) {
+        this.services = services;
+    }
 }
