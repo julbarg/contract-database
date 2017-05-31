@@ -1,6 +1,6 @@
 package com.contract.entities.provider;
 
-import com.contract.entities.Custom;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
