@@ -1,6 +1,8 @@
 package com.contract.controller;
 
 import com.contract.entities.custom.Custom;
+import com.contract.exception.EmailFormatIsWrong;
+import com.contract.util.ValidateEmail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.http.MediaType;
@@ -24,17 +26,20 @@ public class CustomController {
     private MongoTemplate mongoTemplate;
 
     @RequestMapping(value = FIND_ALL, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-
     public List<Custom> findAll(){
        List<Custom> customList = mongoTemplate.findAll(Custom.class);
        return customList;
     }
 
-
     @RequestMapping(value = INSERT, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Custom insert(@RequestBody Custom custom){
-        //if(custom.getContact().getEmail())
-        mongoTemplate.insert(custom, CUSTOM );
+    public Custom insert(@RequestBody Custom custom) throws EmailFormatIsWrong{
+        ValidateEmail email = new ValidateEmail();
+        boolean validEmail = email.validate(custom.getContact().getEmail());
+        if(validEmail == false){
+            throw new EmailFormatIsWrong();
+        }else {
+            mongoTemplate.insert(custom, CUSTOM );
+       }
         return custom;
     }
 }

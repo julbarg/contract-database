@@ -13,8 +13,9 @@ public class ValidateEmail {
     private Pattern pattern;
     private Matcher matcher;
 
-
-    public ValidateEmail() {
+    public boolean validate(String email) {
         pattern = Pattern.compile(EMAIL_PATTERN);
+        matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }
