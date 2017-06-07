@@ -6,5 +6,6 @@ package com.contract.constant;
 public class ExceptionsConstant {
     public static final String DATABASE_RESULT_NOT_FOUND_EXCEPTION_MESSAGE = "Data base results not found";
     public static final String DATABASE_NO_RECORDS_UPDATE_EXCEPTION_MESSAGE = "Data base no records updated";
-    public static final String EMAIL_FORMAT_IS_WRONG = "Email format is wrong";
+    public static final String EMAIL_ADDRESS_FORMAT_IS_WRONG = "Email address format is wrong";
+    public static final String EMAIL_ADDRESS_IS_EXIST = "Email address is exist";
 }

@@ -7,5 +7,6 @@ public class CustomConstant {
     public static final String CUSTOM = "customs";
     public static final String FIND_ALL = "/custom/findAll";
     public static final String INSERT = "/custom/insert";
+    public static final String EMAIL = "contact.email";
 
 }
