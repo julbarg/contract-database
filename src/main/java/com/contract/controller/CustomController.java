@@ -2,12 +2,10 @@ package com.contract.controller;
 
 import com.contract.entities.custom.Custom;
 import com.contract.exception.EmailAddressFormatIsWrong;
-import com.contract.exception.EmailAddressIsExist;
 import com.contract.util.ValidateEmail;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 import static com.contract.constant.CustomConstant.*;
+import static com.contract.constant.ExceptionsConstant.*;
 
 /**
  * Created by anggomez1 on 5/31/17.
@@ -35,25 +34,24 @@ public class CustomController {
     }
 
     @RequestMapping(value = INSERT, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Custom insert(@RequestBody Custom custom) throws EmailAddressFormatIsWrong, EmailAddressIsExist {
+    public Custom insert(@RequestBody Custom custom) throws EmailAddressFormatIsWrong, DuplicateKeyException {
         ValidateEmail email = new ValidateEmail();
         boolean validEmail = email.validate(custom.getContact().getEmail());
-        Query query = new Query(Criteria.where(EMAIL).is(custom.getContact().getEmail()));
-        Custom findEmail = mongoTemplate.findOne(query, Custom.class);
-
         if (validEmail == false) {
             throw new EmailAddressFormatIsWrong();
-        }else{
-        if (findEmail != null) {
-
-            throw new EmailAddressIsExist();
         }
-        else {
-            mongoTemplate.insert(custom, CUSTOM);
-        }
+       try {
+           mongoTemplate.insert(custom, CUSTOM);
+       }catch (DuplicateKeyException e){
+            throw new DuplicateKeyException(EMAIL_ADDRESS_ALREADY_EXISTS);
+       }
         return custom;
-        }
+
     }
+
+
+
+
 
 
 }
