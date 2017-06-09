@@ -1,27 +1,22 @@
 package com.contract.controller;
 
 import com.contract.entities.custom.Custom;
-import com.contract.entities.custom.Service;
 import com.contract.exception.DataBaseResultNotFoundException;
 import com.contract.exception.EmailAddressFormatIsWrongException;
 import com.contract.util.ValidateEmail;
-import com.sun.xml.internal.ws.api.message.Packet;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.*;
-
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.HashMap;
 import java.util.List;
-
 import static com.contract.constant.CustomConstant.*;
 import static com.contract.constant.ExceptionsConstant.*;
 
