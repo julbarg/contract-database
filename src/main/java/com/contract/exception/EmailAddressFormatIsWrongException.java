@@ -4,9 +4,9 @@ import static com.contract.constant.ExceptionsConstant.*;
 /**
  * Created by anggomez1 on 6/5/17.
  */
-public class EmailAddressFormatIsWrong extends Exception{
+public class EmailAddressFormatIsWrongException extends Exception{
 
-    public EmailAddressFormatIsWrong(){
+    public EmailAddressFormatIsWrongException(){
         super(EMAIL_ADDRESS_FORMAT_IS_WRONG);
     }
 }
