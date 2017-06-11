@@ -1,0 +1,400 @@
+{
+	"id": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+	"name": "Contract",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"name": "Providers",
+			"description": "",
+			"order": [
+				"44b65e58-cc21-3589-1186-ef3ddf8aff5e",
+				"e118212a-ff1c-c9b9-43b3-73610286c9e8",
+				"d91d83a8-1cc5-b355-5aa4-38f3139a85d0",
+				"7f42ea25-a58f-5ab3-3a5f-8e01d568f175",
+				"b4d6a631-a506-f373-5187-68d88226aaf7",
+				"84cfd0f1-f854-36b5-e345-f9ff46b81900",
+				"3dee6ea9-bad4-0b63-f842-e24f9ebb9db9",
+				"508257e6-02da-6b5b-21f6-ac95de223308",
+				"977a1368-6c8a-cee4-c0d3-d268e905a9a9",
+				"8c3d7471-8a84-5acc-0461-1adf6521685e"
+			],
+			"owner": "652026"
+		}
+	],
+	"timestamp": 1496953832743,
+	"owner": "652026",
+	"public": false,
+	"requests": [
+		{
+			"id": "3dee6ea9-bad4-0b63-f842-e24f9ebb9db9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/updateService?email=anaduque@gmail.com&name=solo",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "anaduque@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "solo",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Providers - updateService",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497060030624,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{\n    \"name\": \"quiero un nuevo dato\",\n    \"categories\": [\n        \"hola\",\n        \"mundo\",\n        \"cruel\",\n        \"chao\"\n    ],\n    \"available\": false\n}"
+		},
+		{
+			"id": "44b65e58-cc21-3589-1186-ef3ddf8aff5e",
+			"headers": "",
+			"url": "http://localhost:8080/providers/findByEmail?email=JulianB@gmail.com",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": null,
+			"dataMode": "params",
+			"name": "Providers - findByEmail",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1496953819016,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6"
+		},
+		{
+			"id": "508257e6-02da-6b5b-21f6-ac95de223308",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/insertProviderService?email=anaduque@gmail.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "anaduque@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Providers - insertProviderService",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497061409790,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{\n    \"custom\" : \"julbarg@gmail.com\",\n    \"type\" : \"mantenimiento\",\n    \"dateTime\" : \"2016-01-12T09:00:00.000Z\",\n    \"status\" : \"open\"\n}"
+		},
+		{
+			"id": "7f42ea25-a58f-5ab3-3a5f-8e01d568f175",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/findByGeolocation",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Providers - findByGeolocation",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497048772753,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{\n\t\"x\" : -85.2732697842406,\n\t\"y\" : 31.4439024447627\n}"
+		},
+		{
+			"id": "84cfd0f1-f854-36b5-e345-f9ff46b81900",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/insertService?email=anaduque@gmail.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "anaduque@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1497051626271,
+			"name": "Providers - insertService",
+			"description": "",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"responses": [],
+			"rawModeData": "{\n    \"name\": \"ambiental\",\n    \"categories\": [\n        \"gestion ambiental\",\n        \"ingenieria\",\n        \"ambiente\"\n    ],\n    \"available\": true\n}"
+		},
+		{
+			"id": "8c3d7471-8a84-5acc-0461-1adf6521685e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/updateCurriculum?email=anaduque@gmail.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "anaduque@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Proviers - updateCurriculum",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497198816135,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{ \n\t\"experience\" : {\n\t\t\t\"startDate\" : \"2017-06-11T09:00:00Z\"\n\t},\n\t\"services\" : [\n\t\t{\n\t\t\t\"name\" : \"quiero un nuevo dato\",\n\t\t\t\"categories\" : [\n\t\t\t\t\"hola\",\n\t\t\t\t\"mundo\",\n\t\t\t\t\"cruel\",\n\t\t\t\t\"chao\"\n\t\t\t],\n\t\t\t\"available\" : true\n\t\t},\n\t\t{\n\t\t\t\"name\" : \"Uno nuevo\",\n\t\t\t\"categories\" : [\n\t\t\t\t\"ups\",\n\t\t\t\t\"angela\",\n\t\t\t\t\"gomez\",\n\t\t\t\t\"suelta\"\n\t\t\t],\n\t\t\t\"available\" : true\n\t\t}\n\t]\n}"
+		},
+		{
+			"id": "977a1368-6c8a-cee4-c0d3-d268e905a9a9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/updateProviderService?email=anaduque@gmail.com&emailCustom=julbarg@gmail.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "anaduque@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "emailCustom",
+					"value": "julbarg@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Providers - updateProviderService",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497198503665,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{\n\t\t\t\"custom\" : \"julbarg@gmail.com\",\n\t\t\t\"type\" : \"software\",\n\t\t\t\"dateTime\" : \"2016-01-12T09:00:00Z\",\n\t\t\t\"status\" : \"closed\"\n\t\t}"
+		},
+		{
+			"id": "b4d6a631-a506-f373-5187-68d88226aaf7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/updateProvider?email=JulianB@gmail.com",
+			"queryParams": [
+				{
+					"key": "email",
+					"value": "JulianB@gmail.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Provider - updateProvider",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497049448749,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{\n    \"name\": \"Julian Barraganr\",\n    \"contact\": {\n        \"phone\": \"3123089218\"\n    },\n    \"location\": {\n        \"country\": \"Alemania\",\n        \"state\": \"Berlin\",\n        \"city\": \"Berlin\",\n        \"address\": \"Cra 24 bis Nro 13a-56\",\n        \"geolocation\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n            \t52.5199859,\n            \t13.3349143\n            ]\n        }\n    }\n}"
+		},
+		{
+			"id": "d91d83a8-1cc5-b355-5aa4-38f3139a85d0",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/providers/findByService?service=technology",
+			"queryParams": [
+				{
+					"key": "service",
+					"value": "technology",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": null,
+			"dataMode": "params",
+			"name": "Providers - findByService",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497048421213,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6"
+		},
+		{
+			"id": "e118212a-ff1c-c9b9-43b3-73610286c9e8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/providers/insert",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c421a82e-855f-855c-11e7-1dcc0ba4f329",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Providers - insert",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1497047919755,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "652d5650-faa7-bc14-25c8-de6f3379e8f6",
+			"rawModeData": "{\n\t\"name\" : \"Dan Taylor\",\n\t\"contact\" : {\n\t\t\"email\" : \"dantaylor@gmail.com\",\n\t\t\"phone\" : \"3455456567\"\n\t},\n\t\"location\" : {\n\t\t\"country\" : \"Colombia\",\n\t\t\"state\" : \"Cundinamarca\",\n\t\t\"city\" : \"Mosquera\",\n\t\t\"address\" : \"Cra 24 bis Nro 13a-56\",\n\t\t\"geolocation\" : {\n\t\t\t\"type\" : \"Point\",\n\t\t\t\"coordinates\" : [\n\t\t\t\t32.4439024447627,\n\t\t\t\t-75.2732697842406\n\t\t\t]\n\t\t}\n\t},\n\t\"curriculum\" : {\n\t\t\"experience\" : {\n\t\t\t\"startDate\" : \"2016-01-12T09:00:00Z\"\n\t\t}\n\t}\n}"
+		}
+	]
+}
