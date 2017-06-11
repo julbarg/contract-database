@@ -5,6 +5,7 @@ import com.contract.entities.provider.Location;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -67,7 +68,7 @@ public class Provider {
     }
 
     public List<ProvideServices> getProvideServices() {
-        return provideServices;
+        return provideServices != null ? provideServices : new ArrayList<>();
     }
 
     public void setProvideServices(List<ProvideServices> provideServices) {

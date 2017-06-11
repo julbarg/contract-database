@@ -1,5 +1,6 @@
 package com.contract.entities.provider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ public class Curriculum {
     private Experience experience;
 
     public List<Services> getServices() {
-        return services;
+        return services != null ? services : new ArrayList<>();
     }
 
     public void setServices(List<Services> services) {
