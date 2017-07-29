@@ -49,7 +49,7 @@ public class ProviderController {
     public Document findByEmail(String email) throws DataBaseResultNotFoundException {
         AggregationOperation match = new MatchOperation(Criteria.where(EMAIL).is(email));
         AggregationOperation project = new ProjectionOperation().andExclude("_id")
-                                                                .andInclude("name", "location")
+                                                                .andInclude(NAME, "location")
                                                                 .andExpression("curriculum.services").as("services");
 
         Aggregation aggregation = Aggregation.newAggregation(match, project);
@@ -66,7 +66,7 @@ public class ProviderController {
     public Document findByService(String service) throws DataBaseResultNotFoundException {
         AggregationOperation match = new MatchOperation(Criteria.where(CATEGORIES).is(service));
         AggregationOperation project = new ProjectionOperation().andExclude("_id")
-                .andInclude("name", "location", "curriculum.services");
+                .andInclude(NAME, "location", "curriculum.services");
 
         Aggregation aggregation = Aggregation.newAggregation(match, project);
         AggregationResults<Document> output = mongoTemplate.aggregate(aggregation, PROVIDERS, Document.class);
@@ -101,7 +101,7 @@ public class ProviderController {
     public WriteResult updateProvider(@RequestBody Provider provider, String email) {
         Query query = new Query(Criteria.where(EMAIL).is(email));
         Update update = new Update();
-        update.set("name", provider.getName());
+        update.set(NAME, provider.getName());
         update.set("contact.phone", provider.getContact().getPhone());
         update.set("location", provider.getLocation());
 

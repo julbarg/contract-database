@@ -19,4 +19,5 @@ public class ProviderConstant {
     public static final String INSERT_PROVIDER_SERVICE = "/providers/insertProviderService";
     public static final String UPDATE_PROVIDER_SERVICE = "/providers/updateProviderService";
     public static final String UPDATE_CURRICULUM = "/providers/updateCurriculum";
+    public static final String NAME = "name";
 }
